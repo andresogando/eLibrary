@@ -1,0 +1,28 @@
+<% include ../partials/header %> 
+
+<div class="container">
+    <div class="">
+        <h1 style="text-align: center">Edit <%=Book.name%></h1>
+        <div style="width: 30%; margin: 25px auto;">
+        <form action="/Books/<%= Book._id %>?_method=put" method="POST">          
+            <div class="form-group">
+            <input class="form-control" type="text"  placeholder="name" name="Book[name]" value="<%=Book.name%>">
+            </div>
+            <div class="form-group">
+            <input class="form-control" type="number"  placeholder="price" name="Book[price]" value="<%=Book.price%>" min="0.01" step="0.01">
+            </div>
+            <div class="form-group">
+            <input class="form-control" type="text"  placeholder="image url" name="Book[image]" value="<%=Book.image%>">
+            </div>
+            <div class="form-group">
+            <input class="form-control" type="text"  placeholder="Description" name="Book[description]" value="<%=Book.description%>">
+            </div>
+            <div class="form-group">
+            <button class="btn btn-lg btn-primary btn-block" type="submit"> Submit! </button>
+            </div>
+        </form>
+        <a href="/Books">go back!</a>
+    </div>
+    </div>
+</div>
+<% include ../partials/footer %>
