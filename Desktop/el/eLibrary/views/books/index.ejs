@@ -1,0 +1,37 @@
+<% include ../partials/header %> 
+
+
+<div class="container">
+    <header class="jumbotron"> 
+        <div class="container">
+                <h3>Welcome to E-Libray!</h3>
+                <p>Books Index!</p>
+                <p>
+                <a class="btn btn-lg btn-primary" href="/Books/new">Add New Book</a>
+                </p>
+        </div>
+     </header>
+
+    <div class="row text-center" style="display: flex; flex-wrap: wrap; ">
+         <% Books.forEach(function(Book){ %> 
+            <div class="col-md-3 col-sm-6">
+            <div class="img-thumbnail">
+                <img src="<%= Book.image%>" alt="">
+                <div>
+                    <h4><%= Book.name %></h4>
+                </div>
+                <p>
+                    <a href="/Books/<%= Book._id %>" class="btn btn-primary">More Info</a>
+                </p>    
+            </div>
+
+
+            </div>
+        <% }); %>
+    </div>
+    
+<% include ../partials/footer %>
+
+
+
+ 
