@@ -3,19 +3,30 @@
     <head>
         <title>E-Library</title >
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://kit.fontawesome.com/df42958a46.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,600,700&display=swap" rel="stylesheet">
         <link rel="stylesheet"  href="/stylesheets/main.css">
     </head>
     <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <div class= "navbar-header">
-                <a class="navbar-brand" href="/">E-Libray</a>
+                <a class="navbar-brand" href="/books"><i class="fas fa-book-reader"></i></a>
             </div>
-            <div class="">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/books">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Contact Us!</a>
+                </li>
+            </div>
+            <div id="navsign" class="">
                 <ul class="nav justify-content-end">
                     <% if(!currentUser){ %>
-                        <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/register">Sign Up</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/login"><i class="fas fa-user"></i></a></li>
+                        <li class="nav-item"><a class="nav-link" href="/register"><i class="fas fa-user-plus"></i></a></li>
                     <% }else { %>
                         <li><a href="#">Signed In As <%=currentUser.username %></a></li>
                         <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>

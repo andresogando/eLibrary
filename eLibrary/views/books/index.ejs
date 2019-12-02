@@ -11,21 +11,20 @@
                 </p>
         </div>
      </header>
-
-    <div class="row text-center" style="display: flex; flex-wrap: wrap; ">
-         <% Books.forEach(function(Book){ %> 
-            <div class="col-md-3 col-sm-6">
-            <div class="img-thumbnail">
-                <img src="<%= Book.image%>" alt="">
-                <div>
-                    <h4><%= Book.name %></h4>
+    
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% Books.forEach(function(Books){ %>
+            <div class="text-center col-md-3 col-sm-6">
+                <div class="card">
+                   <img class="img-fluid"  src="<%= Books.image %>">
+                   <hr>
+                   <div class="caption">
+                       <h5><%= Books.name %></h5>
+                   </div>
+                   <p>
+                       <a href="/Books/<%= Books._id %>" class="btn btn-primary">More Info</a>
+                   </p>
                 </div>
-                <p>
-                    <a href="/Books/<%= Book._id %>" class="btn btn-primary">More Info</a>
-                </p>    
-            </div>
-
-
             </div>
         <% }); %>
     </div>

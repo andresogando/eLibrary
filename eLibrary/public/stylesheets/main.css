@@ -15,4 +15,16 @@
     display: inline;
 }
 
-   
+i.fas {
+    font-size: 1.5em;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+#foot {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
