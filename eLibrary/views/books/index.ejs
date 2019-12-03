@@ -6,9 +6,11 @@
         <div class="container">
                 <h3>Welcome to E-Libray! <%= currentUser.username%></h3>
                 <p>Books Index!</p>
+                <%if(currentUser.isAdmin){%>
                 <p>
                 <a class="btn btn-lg btn-primary" href="/Books/new">Add New Book</a>
                 </p>
+                <%} %>
         </div>
      </header>
     

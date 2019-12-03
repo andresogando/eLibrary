@@ -13,7 +13,7 @@ middlewareObj.checkBookOwnerShip = function(req, res, next){
                   res.redirect("back");
               }else{
                   //DOES THE USER OWN THE Book? 
-                  if(foundBook.author.id.equals(req.user._id)){
+                  if(req.user.isAdmin){
                       next();
                   } else {
                       req.flash("error", "You don't have permission to do that!");
@@ -38,7 +38,7 @@ middlewareObj.checkCommentOwnership = function(req, res, next){
               res.redirect("back");
           }else{
               //DOES THE USER OWN THE COMMENT? 
-              if(foundcomment.author.id.equals(req.user._id)){
+              if(foundcomment.author.id.equals(req.user._id) || req.user.isAdmin){
                   next();
               } else {
                 req.flash("error", "You don't have permission to do that!");

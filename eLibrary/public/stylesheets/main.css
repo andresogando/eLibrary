@@ -11,6 +11,8 @@
 
 }
 
+
+
 #delete-form {
     display: inline;
 }
@@ -21,10 +23,18 @@ i.fas {
 
 body {
     font-family: 'Poppins', sans-serif;
+    margin-bottom: 60px;
 }
 #foot {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
+
+    
 }
 
+/* Flexbox grid fix */
+.flex-wrap {
+    display:flex;
+    flex-wrap: wrap;
+  }

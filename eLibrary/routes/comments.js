@@ -4,6 +4,7 @@ var Book = require("../models/book");
 var Comment = require("../models/comment");
 var middleware = require("../middleware/index");
 
+
 //Comments New
 router.get("/new",middleware.isLoggedIn, function(req, res){
     // find Book by id
