@@ -1,6 +1,9 @@
 {
   "name": "elibrary",
   "version": "1.0.0",
+  "engines":{
+    "node": "10.16.3"
+  },
   "description": "elibrary",
   "main": "app.js",
   "scripts": {
