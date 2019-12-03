@@ -6,7 +6,7 @@ var express         = require("express"),
     methoOverride   = require("method-override"),
     Books           = require("./models/book"),
     Comment         = require("./models/comment"),
-    seedDB          = require("./seeds"),
+    //seedDB          = require("./seeds"),
     passport        = require("passport"),
     flash           = require("connect-flash"),
     LocalStrategy   = require("passport-local"),
@@ -54,6 +54,7 @@ app.use("/books", booksRoutes);
 app.use("/books/:id/comments", commentRoutes);
 
 
-app.listen(process.env.PORT, function(){
-    console.log("eLibrary server  hast Started! ");
-});
+app.listen(process.env.PORT, process.env.IP, function(){
+    console.log("The eLibrary Server Has Started!");
+ });
+ 
