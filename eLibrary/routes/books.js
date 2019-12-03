@@ -42,7 +42,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
 
 //NEW - show form to create new Book
 router.get("/new",middleware.isLoggedIn, function(req, res){
-   res.render("Books/new"); 
+   res.render("books/new"); 
 });
 
 // SHOW - shows more info about one Book
@@ -54,7 +54,7 @@ router.get("/:id", function(req, res){
         } else {
             console.log(foundBook)
             //render show template with that Book
-            res.render("Books/show", {Book: foundBook});
+            res.render("books/show", {Book: foundBook});
         }
     });
 });
@@ -62,7 +62,7 @@ router.get("/:id", function(req, res){
 // EDIT Book ROUTE
 router.get("/:id/edit", middleware.checkBookOwnerShip, function(req, res){ 
         Book.findById(req.params.id, function(err, foundBook){
-            res.render("Books/edit", {Book: foundBook});
+            res.render("books/edit", {Book: foundBook});
         });
 });
 
