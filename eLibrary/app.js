@@ -19,7 +19,7 @@ var commentRoutes    = require("./routes/comments"),
     indexRoutes      = require("./routes/index")
 
     //process.env.DATABASEURL
-mongoose.connect("mongodb+srv://andresyrn:Andres12340@testapp-y2hwn.mongodb.net/test?retryWrites=true&w=majority", {
+mongoose.connect(process.env.DATABASEURL, {
     useNewUrlParser: true,
     useCreateIndex: true
     }).then(() => {
@@ -64,7 +64,7 @@ app.use("/books", booksRoutes);
 app.use("/books/:id/comments", commentRoutes);
 
 
-app.listen(3000,  function(){
+app.listen(process.env.PORT, process.env.IP,   function(){
     console.log("The eLibrary Server Has Started!");
  });
  
