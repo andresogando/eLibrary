@@ -18,9 +18,14 @@ var commentRoutes    = require("./routes/comments"),
     indexRoutes      = require("./routes/index")
 
 
-mongoose.connect(process.env.DATABASEURL);
-//mongodb://localhost/books_v1
-//mongodb+srv://andresyrn:<password>@testapp-y2hwn.mongodb.net/test?retryWrites=true&w=majority
+mongoose.connect(process.env.DATABASEURL, {
+    useNewUrlParser: true,
+    useCreateIndex: true
+}).then(() => {
+    console.log('connected to DB!');
+}).catch(err => {
+    console.log('ERROR', err.message);
+});
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
