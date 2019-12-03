@@ -54,6 +54,6 @@ app.use("/books", booksRoutes);
 app.use("/books/:id/comments", commentRoutes);
 
 
-app.listen(process.env.PORT, function(){
+app.listen(process.env.PORT, process.env.IP, function(){
     console.log("eLibrary server  hast Started! ");
 });
