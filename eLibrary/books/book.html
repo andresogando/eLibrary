@@ -9,30 +9,31 @@
 </head>
 
 <body>
-    Seleccionar voz a escuchar: <select name="" id="voicelist"></select>
+
+    Seleccionar voz a escuchar: <select name="" id="voiceList"></select>
     <br><br>
-    <input type="text" id="txtinput">
+    <input type="text" id="txtInput">
     <br><br>
     <button id="btnSpeak">Reproducir</button>
 
     <script>
-        var voicelist = document.querySelector('#voiceList');
+        var voiceList = document.querySelector('#voiceList');
         var txtInput = document.querySelector('#txtInput');
         var btnSpeak = document.querySelector('#btnSpeak');
 
         var tts = window.speechSynthesis;
         var voices = [];
 
-        Getvoices();
+        GetVoices();
 
         if (speechSynthesis !== undefined) {
-            speechSynthesis.onvoiceschanged = Getvoices;
+            speechSynthesis.onvoiceschanged = GetVoices;
         }
 
         btnSpeak.addEventListener('click', () => {
 
             var toSpeak = new SpeechSynthesisUtterance(txtInput.value);
-            var selectedVoiceName = voicelist.selectedOption[0].getAttribute('data-name');
+            var selectedVoiceName = voiceList.selectedOption[0].getAttribute('data-name');
             voices.forEach(() => {
                 if (voice.name === selectedVoiceName) {
                     toSpeak.voice = voice;
@@ -42,18 +43,18 @@
             tts.speak(toSpeak);
         });
 
-        function Getvoices() {
+        function GetVoices() {
             voices = tts.getVoices();
-            voicelist.innerHTML = '';
+            voiceList.innerHTML = '';
             voices.forEach((voice) => {
                 var listItem = document.createElement('option');
                 listItem.textContent = voice.name;
                 listItem.setAttribute('data-lang', voice.lang);
                 listItem.setAttribute('data-name', voice.name);
-                voicelist.appendChild(listItem);
+                voiceList.appendChild(listItem);
             });
 
-            voicelist.seletedIndex = 0;
+            voiceList.seletedIndex = 0;
         }
     </script>
 </body>
