@@ -1,32 +1,34 @@
 <% include ./partials/header %>
-<div class="container">
-<hr>
-        <h1 style="text-align: center">Sign Up</h1>
-    <div class="row">
-        <div style="width: 30%; margin: 25px auto;">
-            <form action="/register" method="post">
-                <div class="form-group">
-                    <input class="form-control" type="text" name="username" placeholder="username" required>
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="password" name="password" placeholder="password" required>
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="password" name="adminCode" placeholder="Invitation Code">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                    <button class="btn btn-lg btn-primary btn-block">Sign Up!</button>
-                </div>
-            </form>
-            <a href="/books">Go Back</a>
+    <div class="container">
+        <hr>
+        <h1 style="text-align: center">eLibrary</h1>
+        <h2 style="text-align: center">Sign Up</h2>
+        <div class="row">
+            <div style="width: 30%; margin: 25px auto;">
+                <form action="/register" method="post">
+                    <div class="form-group">
+                        <label for="password">Username</label>
+                        <input class="form-control" type="text" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input class="form-control" type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Invitation Code</label>
+                        <input class="form-control" type="password" name="adminCode" placeholder="Invitation Code">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Email</label>
+                        <input class="form-control" type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-success btn-block">Sign Up!</button>
+                    </div>
+                </form>
+                <br> Have already an account? <a class="btn btn-primary" href="login.ejs" role="button">Login here</a>
+                <a href="/books">Go Back</a>
+            </div>
         </div>
     </div>
-</div>
-<% include ./partials/footer %>
-
-
-
-
+    <% include ./partials/footer %>
