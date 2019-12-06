@@ -5,16 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/books/AudioBookPage.css">
     <title>Audio Books</title>
 </head>
 
 <body>
 
-    Seleccionar voz a escuchar: <select name="" id="voiceList"></select>
-    <br><br>
-    <input type="text" id="txtInput">
-    <br><br>
-    <button id="btnSpeak">Reproducir</button>
+    <div class="form-control">
+        Seleccionar voz a escuchar: <select name="" id="voiceList"></select>
+        <br><br>
+        <textarea id="txtInput" rows="4" cols="100" placeholder="Escribir libro aqui..."></textarea>
+        <br><br>
+        <button id="btnSpeak">Reproducir</button>
+    </div>
 
     <script>
         var voiceList = document.querySelector('#voiceList');

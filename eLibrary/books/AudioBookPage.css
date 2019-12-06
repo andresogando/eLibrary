@@ -1,0 +1,40 @@
+body {
+    font-family: "Segoe UI";
+    font-size: 150px;
+    font-style: oblique;
+    line-height: 1.5em;
+}
+
+.shadow-textarea textarea.form-control::placeholder {
+    font-weight: 300;
+}
+
+.shadow-textarea textarea.form-control {
+    padding-left: 0.8rem;
+}
+
+.form-control {
+    margin-left: 10px;
+}
+
+textarea::-webkit-input-placeholder {
+    color: #0bf;
+}
+
+textarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: #0bf;
+}
+
+textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #0bf;
+}
+
+textarea:-ms-input-placeholder {
+    color: #0bf;
+}
+
+textarea::placeholder {
+    color: #0bf;
+}
