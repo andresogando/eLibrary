@@ -1,40 +1,9 @@
-.thumbnail img {
-    width: 100%;
-}
-
-.thumbnail {
-    padding: 0;
-}
-
-.thumbnail .caption-full {
-    padding: 9px;
-}
-
-#delete-form {
-    display: inline;
-}
-
-i.fas {
-    font-size: 1.5em;
-}
-
 body {
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 60px;
-}
-
-#foot {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-
-/* Flexbox grid fix */
-
-.flex-wrap {
-    display: flex;
-    flex-wrap: wrap;
+    font-family: "Segoe UI";
+    font-size: 150px;
+    font-style: oblique;
+    line-height: 1.5em;
+    background-color: #F6D4CD;
 }
 
 .shadow-textarea textarea.form-control::placeholder {
