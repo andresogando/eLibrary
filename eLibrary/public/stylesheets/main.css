@@ -8,10 +8,7 @@
 
 .thumbnail .caption-full {
     padding: 9px;
-
 }
-
-
 
 #delete-form {
     display: inline;
@@ -25,16 +22,59 @@ body {
     font-family: 'Poppins', sans-serif;
     margin-bottom: 60px;
 }
+
 #foot {
     position: fixed;
     bottom: 0;
     width: 100%;
-
-    
 }
 
+
 /* Flexbox grid fix */
+
 .flex-wrap {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
-  }
+}
+
+.shadow-textarea textarea.form-control::placeholder {
+    font-weight: 300;
+}
+
+.shadow-textarea textarea.form-control {
+    padding-left: 0.8rem;
+}
+
+.form-control {
+    margin-left: 10px;
+}
+
+textarea::-webkit-input-placeholder {
+    color: #0bf;
+}
+
+textarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: #0bf;
+}
+
+textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #0bf;
+}
+
+textarea:-ms-input-placeholder {
+    color: #0bf;
+}
+
+textarea::placeholder {
+    color: #0bf;
+}
+
+.imgS {
+    width: 600px;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #ccc;
+}
