@@ -21,6 +21,8 @@ i.fas {
 body {
     font-family: 'Poppins', sans-serif;
     margin-bottom: 60px;
+    height: 100%;
+
 }
 
 #foot {
@@ -78,3 +80,14 @@ textarea::placeholder {
     padding: 10px;
     border: 2px solid #ccc;
 }
+
+label {
+    cursor: pointer;
+  }
+  
+  textarea {
+    width: 400px;
+    height: 150px;
+  }
+
+  

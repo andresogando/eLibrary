@@ -59,6 +59,22 @@ router.get("/:id", function(req, res){
     });
 });
 
+
+//Read Book ROUTE
+router.get("/:id/read",middleware.isLoggedIn, function(req, res){ 
+    Book.findById(req.params.id, function(err, foundBook){
+        res.render("books/read", {Book: foundBook});
+    });
+});
+
+//Listen Book ROUTE
+router.get("/:id/listen", middleware.isLoggedIn, function(req, res){ 
+    Book.findById(req.params.id, function(err, foundBook){
+        res.render("books/audiobook", {Book: foundBook});
+    });
+});
+
+
 // EDIT Book ROUTE
 router.get("/:id/edit", middleware.checkBookOwnerShip, function(req, res){ 
         Book.findById(req.params.id, function(err, foundBook){
@@ -92,6 +108,8 @@ router.delete("/:id",middleware.checkBookOwnerShip, function(req, res){
         }
     });
 });
+
+
 
 
 module.exports = router;

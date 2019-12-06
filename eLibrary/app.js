@@ -18,7 +18,9 @@ var commentRoutes    = require("./routes/comments"),
     booksRoutes      = require("./routes/books"),
     indexRoutes      = require("./routes/index")
 
-    //process.env.DATABASEURL
+
+    //process.env.DATABASEURL 
+
 mongoose.connect(process.env.DATABASEURL, {
     useNewUrlParser: true,
     useCreateIndex: true
@@ -27,6 +29,7 @@ mongoose.connect(process.env.DATABASEURL, {
     }).catch(err => {
         console.log('ERROR', err.message);
     });
+
 
 //require moments!
 app.locals.moment = require('moment');
