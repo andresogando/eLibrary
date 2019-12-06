@@ -3,6 +3,7 @@ body {
     font-size: 150px;
     font-style: oblique;
     line-height: 1.5em;
+    background-color: #F6D4CD;
 }
 
 .shadow-textarea textarea.form-control::placeholder {
@@ -37,4 +38,12 @@ textarea:-ms-input-placeholder {
 
 textarea::placeholder {
     color: #0bf;
+}
+
+.imgS {
+    width: 600px;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #ccc;
 }
